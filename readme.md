@@ -4,6 +4,8 @@
 2. express
 3. nodemon
 4. dotenv
+5. mongodb
+6. mongoose
 
 
 ## Good practices
