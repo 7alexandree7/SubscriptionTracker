@@ -6,7 +6,7 @@
 4. dotenv
 
 
-## New Knowledge
+## Good practices
 
 1. Create a specific file for initialization -> `server.js`
 2. Route centralizer `routes / index.js`
