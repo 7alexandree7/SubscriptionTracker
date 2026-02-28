@@ -6,6 +6,8 @@
 4. dotenv
 5. mongodb
 6. mongoose
+7. `jsonwebtoken`
+8. bcryptjs
 
 
 ## 📋 Roadmap
@@ -15,3 +17,4 @@
 3. `Config /env.js` -> Organize, centralize, and control all application settings, especially evironment variables, preparing the project to run safely in multiple environments
 4. Connect the database to the backend with `mongoose`
 5. Create `Models`
+6. Creating a general middleware to handle errors, primarily those originating from Mongoose. `error.middleware.js`
