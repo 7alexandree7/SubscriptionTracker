@@ -1,3 +1,5 @@
+# Auth Routes
+
 ### Test GET
 GET http://localhost:5500/api/v1/test
 
@@ -19,3 +21,12 @@ Content-Type: application/json
   "email": "testuser2@example.com",
   "password": "test2password"
 }
+
+----------------------------------------------------------------------------------------------
+# User Routes
+
+### Get All Users
+GET http://localhost:5500/api/v1/users
+
+### Get User By ID
+GET http://localhost:5500/api/v1/users/69a4d43c376038573367dcc0
