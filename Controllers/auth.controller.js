@@ -9,11 +9,11 @@ export const signUp = async (req, res, next) => {
     session.startTransaction()
 
     try {
-        const {name, email, password} = req.body
-        const existingUser = await User.findOne({email}).session(session)
+        const { name, email, password } = req.body
+        const existingUser = await User.findOne({ email }).session(session)
 
-        if(existingUser) {
-            res.status(409).json({message: "User already exists!"})
+        if (existingUser) {
+            res.status(409).json({ message: "User already exists!" })
             return
         }
 
@@ -26,9 +26,9 @@ export const signUp = async (req, res, next) => {
                 email,
                 password: hashedPassord
             }
-        ], {session})
+        ], { session })
 
-        const token = jwt.sign({id: newUsers[0]._id }, JWT_SECRET, {expiresIn: JWT_EXPIRES_IN} )
+        const token = jwt.sign({ id: newUsers[0]._id }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN })
 
         await session.commitTransaction()
         session.endSession()
@@ -41,7 +41,7 @@ export const signUp = async (req, res, next) => {
                 user: newUsers[0]
             }
         })
-        
+
     } catch (error) {
         await session.abortTransaction()
         session.endSession()
@@ -52,21 +52,21 @@ export const signUp = async (req, res, next) => {
 export const signIn = async (req, res, next) => {
     try {
         const { email, password } = req.body
-        const user = await User.findOne({ email})
+        const user = await User.findOne({ email })
 
         if (!user) {
-            res.status(404).json({message: "User not found!"})
+            res.status(404).json({ message: "User not found!" })
             return
         }
 
         const isPasswordIsValid = bcrypt.compareSync(password, user.password)
 
-        if(!isPasswordIsValid) {
-            res.status(401).json({message: "Invalid password!"})
+        if (!isPasswordIsValid) {
+            res.status(401).json({ message: "Invalid password!" })
             return
         }
 
-        const token = jwt.sign({userId: user._id }, JWT_SECRET, {expiresIn: JWT_EXPIRES_IN} )
+        const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN })
 
         res.status(200).json({
             success: true,
