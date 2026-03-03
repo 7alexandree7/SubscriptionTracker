@@ -8,6 +8,7 @@
 6. mongoose
 7. jsonwebtoken
 8. bcryptjs
+9. arject
 
 
 ## 📋 Roadmap
@@ -18,7 +19,9 @@
 4. Connect the database to the backend with `mongoose`
 5. Create `Models`
 6. Creating a general middleware to handle errors, primarily those originating from Mongoose. `error.middleware.js`
-7. start the authentication controllers / atomic config
+7. Start the authentication controllers / `atomic config`
+8. Start controllers for `user routes`
+9. `Middleware` of authorization
 
 
 
