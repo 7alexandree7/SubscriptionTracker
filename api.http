@@ -8,9 +8,9 @@ POST http://localhost:5500/api/v1/auth/sign-up
 Content-Type: application/json
 
 {
-  "name": "testuser2",
-  "email": "testuser2@example.com",
-  "password": "test2password"
+  "name": "testuser3",
+  "email": "testuser3@example.com",
+  "password": "test3password"
 }
 
 ### Sign In
@@ -18,11 +18,11 @@ POST http://localhost:5500/api/v1/auth/sign-in
 Content-Type: application/json
 
 {
-  "email": "testuser2@example.com",
-  "password": "test2password"
+  "email": "testuser3@example.com",
+  "password": "test3password"
 }
 
-----------------------------------------------------------------------------------------------
+
 # User Routes
 
 ### Get All Users
@@ -30,3 +30,4 @@ GET http://localhost:5500/api/v1/users
 
 ### Get User By ID
 GET http://localhost:5500/api/v1/users/69a4d43c376038573367dcc0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE3MTA5NmJhMTMwN2FiYzY2YzAyMzYiLCJpYXQiOjE3NzI1NTY0NzYsImV4cCI6MTc3MjY0Mjg3Nn0.YiAARVS2vyejgy8lNMf1-RtGIKU-24pQAx8Meo64Nzk
