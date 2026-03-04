@@ -14,3 +14,23 @@ export const createSubscription = async (req, res, next) => {
         next(error)
     }
 }
+
+
+export const getSubscriptions = async (req, res, next) => {
+    try {
+        if (req.user.id !== req.params.id) {
+            return res.status(403).json({
+                success: false,
+                message: "Unauthorized access"
+            })
+        }
+        const subscriptions = await Subscription.find({ user: req.params.id })
+        res.status(200).json({
+            success: true,
+            message: "Subscriptions retrieved successfully",
+            data: subscriptions
+        })
+    } catch (error) {
+        next(error)
+    }
+}
