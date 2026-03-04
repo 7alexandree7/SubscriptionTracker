@@ -22,6 +22,7 @@
 7. Start the authentication controllers / `atomic config`
 8. Start controllers for `user routes`
 9. `Middleware` of authorization
+10. Start controllers for `Subscription routes`
 
 
 
