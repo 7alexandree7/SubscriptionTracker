@@ -8,9 +8,9 @@ POST http://localhost:5500/api/v1/auth/sign-up
 Content-Type: application/json
 
 {
-  "name": "testuser3",
-  "email": "testuser3@example.com",
-  "password": "test3password"
+  "name": "testuser4",
+  "email": "testuser4@example.com",
+  "password": "test4password"
 }
 
 ### Sign In
@@ -18,8 +18,8 @@ POST http://localhost:5500/api/v1/auth/sign-in
 Content-Type: application/json
 
 {
-  "email": "testuser3@example.com",
-  "password": "test3password"
+  "email": "testuser4@example.com",
+  "password": "test4password"
 }
 
 
@@ -30,19 +30,19 @@ GET http://localhost:5500/api/v1/users
 
 ### Get User By ID
 GET http://localhost:5500/api/v1/users/69a4d43c376038573367dcc0
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE3MTA5NmJhMTMwN2FiYzY2YzAyMzYiLCJpYXQiOjE3NzI1NTY0NzYsImV4cCI6MTc3MjY0Mjg3Nn0.YiAARVS2vyejgy8lNMf1-RtGIKU-24pQAx8Meo64Nzk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE3MTA5NmJhMTMwN2FiYzY2YzAyMzYiLCJpYXQiOjE3NzI2MzM3NDksImV4cCI6MTc3MjcyMDE0OX0.BhTp1ZlSfJ6PBXachg81f8kybCXatqTXUbFc2y1g5kI
 
 
 ### Subscription Routes
 
 ### Create Subscription
 POST http://localhost:5500/api/v1/subscriptions
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE3MTA5NmJhMTMwN2FiYzY2YzAyMzYiLCJpYXQiOjE3NzI1NTY0NzYsImV4cCI6MTc3MjY0Mjg3Nn0.YiAARVS2vyejgy8lNMf1-RtGIKU-24pQAx8Meo64Nzk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE4M2VmYjVjZjRiOWNmMDEyMTFhZWUiLCJpYXQiOjE3NzI2MzM5MTUsImV4cCI6MTc3MjcyMDMxNX0.66ivdZsyDB8Adlk8-VgrvPtPKM0xdudXvYdgArZ9040
 Content-Type: application/json
 
 {
-  "name": "Netflix Premiun",
-  "price": 15.99,
+  "name": "Amazon Prime",
+  "price": 20.99,
   "currency": "USD",
   "frequency": "monthly",
   "category": "Entertainment",
@@ -53,4 +53,8 @@ Content-Type: application/json
 
 ### get Subscription by user id
 GET http://localhost:5500/api/v1/subscriptions/user/69a71096ba1307abc66c0236
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE3MTA5NmJhMTMwN2FiYzY2YzAyMzYiLCJpYXQiOjE3NzI1NTY0NzYsImV4cCI6MTc3MjY0Mjg3Nn0.YiAARVS2vyejgy8lNMf1-RtGIKU-24pQAx8Meo64Nzk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE3MTA5NmJhMTMwN2FiYzY2YzAyMzYiLCJpYXQiOjE3NzI2MzM3NDksImV4cCI6MTc3MjcyMDE0OX0.BhTp1ZlSfJ6PBXachg81f8kybCXatqTXUbFc2y1g5kI
+
+### get all Subscriptions
+GET http://localhost:5500/api/v1/subscriptions/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE3MTA5NmJhMTMwN2FiYzY2YzAyMzYiLCJpYXQiOjE3NzI2MzM3NDksImV4cCI6MTc3MjcyMDE0OX0.BhTp1ZlSfJ6PBXachg81f8kybCXatqTXUbFc2y1g5kI
