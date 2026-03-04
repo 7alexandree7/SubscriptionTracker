@@ -41,7 +41,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE4M
 Content-Type: application/json
 
 {
-  "name": "Amazon Prime",
+  "name": "Amazon Prime2",
   "price": 20.99,
   "currency": "USD",
   "frequency": "monthly",
@@ -57,4 +57,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE3M
 
 ### get all Subscriptions
 GET http://localhost:5500/api/v1/subscriptions/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE3MTA5NmJhMTMwN2FiYzY2YzAyMzYiLCJpYXQiOjE3NzI2MzM3NDksImV4cCI6MTc3MjcyMDE0OX0.BhTp1ZlSfJ6PBXachg81f8kybCXatqTXUbFc2y1g5kI
+
+
+
+### get Subscription details by ID
+GET http://localhost:5500/api/v1/subscriptions/details/69a8406b075e2eeb2a771db2
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWE3MTA5NmJhMTMwN2FiYzY2YzAyMzYiLCJpYXQiOjE3NzI2MzM3NDksImV4cCI6MTc3MjcyMDE0OX0.BhTp1ZlSfJ6PBXachg81f8kybCXatqTXUbFc2y1g5kI

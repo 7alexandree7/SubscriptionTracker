@@ -56,3 +56,25 @@ export const getAllSubscriptions = async (req, res, next) => {
         next(error)
     }
 }
+
+
+export const getSubscriptionsDetails = async (req, res, next) => {
+    try {
+        const subscriptionDetails  = await Subscription.findById(req.params.id)
+
+        if(!subscriptionDetails) {
+            return res.status(404).json({
+                success: false,
+                message: "Subscription not found"
+            })
+        }
+
+        res.status(200).json({
+            success: true,
+            message: "Subscription details retrieved successfully",
+            data: subscriptionDetails
+        })
+    } catch (error) {
+        next(error)
+    }
+}
